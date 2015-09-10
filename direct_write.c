@@ -42,7 +42,7 @@ int main(int argc, char * argv[])
 	memset(buf, 'c', BUF_SIZE);
 
 
-//	fd = open("/mnt/shell/emulated/0/direct_io.data", O_WRONLY | O_DIRECT | O_CREAT | O_TRUNC, 0755);
+/*	fd = open(filename, O_WRONLY | O_DIRECT | O_CREAT | O_TRUNC, 0755);*/
 	fd = open(filename, O_WRONLY | O_DSYNC  | O_DIRECT | O_CREAT | O_LARGEFILE, 0755);
 	if (fd < 0){
 		perror("open ./direct_io.data failed");
